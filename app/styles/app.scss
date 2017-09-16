@@ -1,0 +1,38 @@
+@import 'utils/normalize';
+@import 'variables/index';
+
+
+html, body {
+  font-family: 'Avenir', sans-serif;
+  color: $color-fuscous-gray;
+}
+
+.brand-logo-wrapper {
+  height: 50px;
+  img {
+    height: 100%;
+    float: left;
+  }
+  h1 {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    line-height: 50px;
+    margin: 0;
+  }
+}
+
+
+.app-header {
+  padding:10px;
+  border-top: 1px solid $color-mercury;
+  border-bottom: 1px solid $color-mercury;
+  display: flex;
+}
+
+.app-menu {
+  display: flex;
+}
+.app-menu--item {
+
+}
