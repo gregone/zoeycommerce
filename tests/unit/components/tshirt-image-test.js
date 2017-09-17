@@ -1,4 +1,5 @@
 import { moduleForComponent, test } from 'ember-qunit';
+import Ember from 'ember';
 
 moduleForComponent('tshirt-image', 'Unit | Component | tshirt image', {
   // Specify the other units that are required for this test
@@ -18,8 +19,14 @@ test('it renders', function(assert) {
     colorways: ['red', 'blue', 'green']
   };
 
+
   component.set('tshirt', fakeTshirt);
+  this.render();
+
   assert.equal(component.get('imageUrl'), 'http://api.zoeycommerce.com/products/1/image?color=red');
-  component.set('colorWay', 'blue');
-  assert.equal(component.get('imageUrl'), 'http://api.zoeycommerce.com/products/1/image?color=blue');
+  Ember.run.next(()=> {
+    component.set('selectedColorWay', 'blue');
+    assert.equal(component.get('imageUrl'), 'http://api.zoeycommerce.com/products/1/image?color=blue');
+  });
+
 });
