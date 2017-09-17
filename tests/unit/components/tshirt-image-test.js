@@ -19,7 +19,7 @@ test('it renders', function(assert) {
   };
 
   component.set('tshirt', fakeTshirt);
-  assert.equal(component.get('imageUrl'), 'http://api.zoeyxcommerce.com/products/1/image?color=red');
+  assert.equal(component.get('imageUrl'), 'http://api.zoeycommerce.com/products/1/image?color=red');
   component.set('colorWay', 'blue');
-  assert.equal(component.get('imageUrl'), 'http://api.zoeyxcommerce.com/products/1/image?color=blue');
+  assert.equal(component.get('imageUrl'), 'http://api.zoeycommerce.com/products/1/image?color=blue');
 });
